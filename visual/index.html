@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Exemplo de Layout</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const hamburguer = document.querySelector(".hamburguer");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li");
+
+        hamburguer.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+            links.forEach((link) => {
+                link.classList.toggle("fade");
+            });
+        });
+
+    </script>
+
+    <section id="banner">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img
+                        src="https://img.freepik.com/fotos-premium/uma-tigela-de-vidro-com-pipoca-e-controle-remoto-ao-fundo-a-tv-funciona-noite-aconchegante-assistindo-a-um-filme-ou-serie-de-tv-em-casa_79782-3014.jpg?w=1380"
+                        alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://img.freepik.com/fotos-premium/cerveja-e-lanches-em-fundo-de-tv-jogo-de-futebol_79782-3042.jpg"
+                        alt=""></div>
+                <div class="swiper-slide"><img
+                        src="https://img.freepik.com/fotos-premium/uma-tigela-de-madeira-com-pipoca-na-mesa_79782-2586.jpg"
+                        alt=""></div>
+            </div>
+        </div>
+
+        <div class="logo">
+            DEL-EON
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Sobre Nós</h2>
+        <p>Descrição da empresa e seus valores.</p>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Seus canais favoritos na melhor qualidade e preço baixo!</h2>
+            <div class="service">
+                <a href="#" class="button"><h3>Peça seu teste</h3></a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>Direitos autorais © 2023 Exemplo de Layout</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+
+            },
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+
+</body>
+
+</html>
